@@ -21,6 +21,33 @@ public class Test061
 {
 	public static void main(String[] args)
 	{
-		
+	int i, j;  //각 행과 열의 루프 변수	
+
+	for (i=0; i<5; i++)
+	{
+		for (j=0; j<9; j++)
+		{
+			int num1 = (9/2)-i;		//
+		    int num2 = (9/2)+i;		//
+
+			if (num1<=j && num2>=j)
+			{
+				System.out.print("*");
+			}
+			else
+				System.out.print(" ");
+		}
+			System.out.println();
+	}
 	}
 }
+
+// 실행 결과
+/*
+    *
+   ***
+  *****
+ *******
+*********
+계속하려면 아무 키나 누르십시오 . . .
+*/

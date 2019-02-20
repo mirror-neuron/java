@@ -21,6 +21,21 @@ public class Test062
 {
 	public static void main(String[] args)
 	{
-		
+	int i, j;  //각 행과 열의 루프 변수	
+
+	for (i=0; i<5; i++)
+	{
+		for (j=0; j<9; j++)
+		{
+
+			if (8-i>=j && i<=j)
+			{
+				System.out.print("*");
+			}
+			else
+				System.out.print(" ");
+		}
+			System.out.println();
+	}
 	}
 }

@@ -21,10 +21,33 @@ public class Test060
 {
 	public static void main(String[] args)
 	{
-		for (i; ; )
+		// 주요 변수 선언
+		int i, j;    // i:행값, j:열값
+		
+		// 연산 및 처리(중첩 for문과 if문으로 해결)
+		for (i=1; i<=5; i++)	  // 행값을 '5'까지 1씩 증가시킨다.
 		{
+			for (j=1; j<=5 ; j++) // 열값을 '5'까지 1씩 증가시킨다.
+			{
+				if (5-i<j) // 행값과 열값의 차를 기준으로 판별
+				{
+					System.out.print("*"); // if문에 각 행,열값을 대입 후 "*" 출력
+				}
+				else 
+					System.out.print(" "); // if문에 각 행,열값을 대입 후 " " 출력
+			}
+			System.out.println();  // 개행
 		}
 	}
-		
-	}
 }
+
+// 실행 결과
+/*
+    *
+   **
+  ***
+ ****
+*****
+계속하려면 아무 키나 누르십시오 . . .
+*/
+
