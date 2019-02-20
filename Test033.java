@@ -37,26 +37,26 @@ import java.io.IOException;
 
 public class Test033
 {
-	// ○ 사용자로부터 임의의 연도 입력 받음
+
 	public static void main(String[] args) throws IOException
 	{
 	// ○ BufferedReader 인스턴스 생성
-	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 
 	// ○ 주요 변수 선언
-	int year=0;		// 임의의 연도 입력	
+	int year=0;		// year: 사용자로부터 임의의 연도 입력 받음
 
 	// ○ 연산 및 처리
     System.out.print("임의의 연도 입력 : ");
 	year = Integer.parseInt(br.readLine());
 		
-	if (year%400==0 && year%100!=0 || year%4==0)
+	if (year%400==0 && year%100!=0 || year%4==0) // if문 : 400년 주기이면서 100년 주기가 아니고, 4년 주기인 윤년 판별  
 	{
-		System.out.printf("%d년 → 윤년%n", year); 	
+		System.out.printf("%d년 → 윤년%n", year); // 윤년 출력
 	}
 	else
 	{
-		System.out.printf("%d년 → 평년%n", year);
+		System.out.printf("%d년 → 평년%n", year); // else문 : 평년 출력
 	}
 	}
 }

@@ -21,10 +21,11 @@ public class Test041
 	public static void main(String[] args) throws IOException
 	{
 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
+	//내가 풀이한 내용
+	/*	
 	int n;
 	n = Integer.parseInt(br.readLine());
-/*
+
 	switch (n)	// 일반모델
 	{
 	case 1 : System.out.print("★\n"); break;
@@ -32,13 +33,52 @@ public class Test041
 	case 3 : System.out.print("★★★\n"); break;
 	default : System.out.println("입력 오류~!!"); 
 	}
-*/
+	
+	//③
 	switch (n)  // 기본모델
 	{
 	case 3 : System.out.print("★"); 
     case 2 : System.out.print("★"); 
 	case 1 : System.out.print("★\n"); break;
 	default : System.out.println("입력 오류~!!"); 
+	*/
+
+	//함께 풀이한 내용
+	int n;
+	
+	System.out.print("임의의 정수 입력(1~3) : ");
+	n = Integer.parseInt(br.readLine());
+	
+	//①
+	/*
+	switch (n)
+	{
+	case 1: System.out.println("★"); break;
+	case 2: System.out.println("★★"); break;
+	case 3: System.out.println("★★★"); break;
+	default: System.out.println("입력 오류~!!!");
 	}
+	*/
+	
+	//②
+	switch (n)
+	{
+	default: System.out.println("입력 오류~!!");break;
+	case 3: System.out.print("★\n");
+	case 2: System.out.print("★\n");
+	case 1: System.out.print("★\n");
+	
+	}
+		
 	}
 }
+//실행 결과
+/*
+임의의 정수 입력(1~3) : 3
+★★★
+계속하려면 아무 키나 누르십시오 . . .
+
+임의의 정수 입력(1~3) : 4
+입력 오류~!!
+계속하려면 아무 키나 누르십시오 . . .
+*/
