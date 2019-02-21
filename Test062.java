@@ -21,21 +21,31 @@ public class Test062
 {
 	public static void main(String[] args)
 	{
-	int i, j;  //각 행과 열의 루프 변수	
+	int i, j;  // i:행값, j:열값	
 
-	for (i=0; i<5; i++)
+	for (i=0; i<5; i++) // 행값을 '5'까지 1씩 증가시킨다.
 	{
-		for (j=0; j<9; j++)
+		for (j=0; j<9; j++) // 열값을 '9'까지 1씩 증가시킨다.
 		{
 
-			if (8-i>=j && i<=j)
+			if (8-i>=j && i<=j)  // 오른쪽 공백과 왼쪽 공백이 동일할 때 "*" 출력
 			{
-				System.out.print("*");
+				System.out.print("*"); //if문에 각 행,열값을 대입 후 "*" 출력
 			}
 			else
-				System.out.print(" ");
+				System.out.print(" "); //if문에 각 행,열값을 대입 후 " " 출력
 		}
-			System.out.println();
+			System.out.println(); // 개행
 	}
 	}
 }
+
+// 실행 결과
+/*
+*********
+ *******
+  *****
+   ***
+    *
+계속하려면 아무 키나 누르십시오 . . .
+*/

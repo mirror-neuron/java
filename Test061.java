@@ -21,23 +21,25 @@ public class Test061
 {
 	public static void main(String[] args)
 	{
-	int i, j;  //각 행과 열의 루프 변수	
+	// 주요 변수 선언
+	int i, j;  // i:행값, j:열값	
 
-	for (i=0; i<5; i++)
+    // 연산 및 처리(중첩 for문과 if문으로 해결)
+	for (i=0; i<5; i++)		// 행값을 '5'까지 1씩 증가시킨다.
 	{
-		for (j=0; j<9; j++)
+		for (j=0; j<9; j++)	// 열값을 '9'까지 1씩 증가시킨다.
 		{
-			int num1 = (9/2)-i;		//
-		    int num2 = (9/2)+i;		//
+			int num1 = (9/2)-i;		// num1 :행과 열의 중심에 "*"이 찍히므로 이를 중심으로 왼쪽 공백 변수
+		    int num2 = (9/2)+i;		// num2 :행과 열의 중심에 "*"이 찍히므로 이를 중심으로 오른쪽 공백 변수
 
-			if (num1<=j && num2>=j)
-			{
-				System.out.print("*");
+			if (num1<=j && num2>=j) // 행값과 열값의 차가 동일할 때 "*" 출력
+ 			{
+				System.out.print("*");   //if문에 각 행,열값을 대입 후 "*" 출력
 			}
 			else
-				System.out.print(" ");
+				System.out.print(" ");  //if문에 각 행,열값을 대입 후 " " 출력
 		}
-			System.out.println();
+			System.out.println(); // 개행
 	}
 	}
 }
