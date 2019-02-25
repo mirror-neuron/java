@@ -28,19 +28,41 @@ public class CircleTest2
 {
 	int r;
 	final double PI = 3.141592; 
+	double area; 
+	double length; 
 
-	double input() throws IOException  
-	{
+	void input() throws IOException
+		{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
+	
 		System.out.print("반지름 입력 : ");
 		r = Integer.parseInt(br.readLine());
 
-		double result = r * r * PI;
-		double result = r * 2 * PI;
+		calArea();
+		calLength();
+		print(area, length);
+		}
 
+	void calArea()
+    {
+		area = r * r * PI;
+	}
+
+	// 원의 둘레 메소드 정의
+    void calLength()
+	{
+		length = r * 2 * PI;
+	}
+
+	// 출력 메소드 정의
+	void print(double a, double l)
+	{
 		System.out.printf("\n>> 반지름이 %d인 원의", r);
 		System.out.printf("\n>> 넓이 : %.2f", a);
 		System.out.printf("\n>> 둘레 : %.2f\n", l);
 	}
+
 }
+
+
+

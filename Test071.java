@@ -38,7 +38,7 @@ public class Test071
 		ob.print(area, length);
 
 		*/
-		CircleTest ob = new CircleTest();
+		CircleTest2 ob = new CircleTest2();
 
 		ob.input(); 
 	}
