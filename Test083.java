@@ -14,7 +14,7 @@
 // >> 가장 큰 수 → 92
 // 계속하려면 아무 키나 누르세요...
 
-import java.util.Scanner;  // 사용자로부터 임의의 정수형 데이터 입력 받음
+import java.util.Scanner;  // import 구문으로 외부 클래스 Scanner 호출하기
 
 public class Test083
 {
@@ -23,33 +23,51 @@ public class Test083
 		// Scanner 인스턴스 생성
 		Scanner sc = new Scanner(System.in); 
 
-		int num, max=0;
+		// ○ 주요 변수 선언
+		int num;		// 사용자에게 받을 '입력할 데이터의 갯수' 변수  
+	    int max;		// 최댓값을 비교하고 출력할 max변수
 
-		System.out.print("입력할 데이터의 갯수  : ");
-		num = sc.nextInt();
-	
-		System.out.print("데이터 입력(공백구분) : ");			
-		int[] arr = new int[num];
+		// ○ 사용자에게 데이터 입력 받기
+		System.out.print("입력할 데이터의 갯수 : ");	// 사용자에게 안내 메시지 출력
+		num = sc.nextInt();		// num변수에 정수형 숫자를 입력 받음
 
-		for (int i=0; i<num; i++)
+		System.out.print("데이터 입력(공백구분) : ");	// 사용자에게 안내 메시지 출력		
+		int[] arr = new int[num];	// 입력 받은 num변수 만큼의 arr배열 생성	
+		
+		// ○ 연산 및 처리
+		for (int i=0; i<num; i++)	// 입력 받은 num변수의 최댓값을 구해줄 반복문
 		{
-			arr[i] = sc.nextInt();
+			arr[i] = sc.nextInt();	 // arr배열의 i번째 공간에 숫자를 입력 받음
+									 // 인덱스 i를 '0'으로 초기화, 첫 번째 부터 num값 끝까지 1씩 증가함
 		}
 
-		max = arr[0];
-		for (int i=1; i<num; i++)
-		{
-			if (max<arr[i])
+		max = arr[0];				// 최댓값을 배열의 가장 첫 번째 값으로 설정하여 초기화
+									// (사용자가 음수를 입력할 경우를 대비) 
+		
+		// ○ 배열 요소 전체 출력
+		for (int i=1; i<num; i++)	// 인덱스 i를 '1'로 초기화, 두 번째 값부터 num값 끝까지 비교함 
+		{						 
+			if (max <= arr[i])			// 만약 입력 받은 숫자가 최댓값 max보다 크면  
 			{
-				max = arr[i];
-			}
-		}
-		System.out.printf(">> 가장 큰 수 → %d\n", max);
+				max = arr[i];		// max변수에 해당 배열값을 대입하여 num값 전체의 최댓값 갱신함	
+		    }
+	    }
+		System.out.printf(">> 가장 큰 수 → %d\n", max); // 최댓값 출력 후 개행 
 	}
-	
 }
+
 
 // 실행 결과
 /*
+// 양수 입력 받았을 때
+입력할 데이터의 갯수 : 5
+데이터 입력(공백구분) : 30 97 21 33 86
+>> 가장 큰 수 → 97
+계속하려면 아무 키나 누르십시오 . . .
 
+// 음수 입력 받았을 때 
+입력할 데이터의 갯수 : 3
+데이터 입력(공백구분) : -3 -5 -9
+>> 가장 큰 수 → -3
+계속하려면 아무 키나 누르십시오 . . .
 */

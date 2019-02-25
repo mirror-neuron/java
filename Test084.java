@@ -26,37 +26,45 @@
 // 98 : -24.0
 // 계속하려면 아무 키나 누르세요...
 
-import java.util.Scanner;
+import java.util.Scanner; // import 구문으로 외부 클래스 Scanner 호출하기
 
 public class Test084
 {
 	public static void main(String[] args) 
 	{
-		Scanner sc = new Scanner(System.in);
+		// Scanner 인스턴스 생성
+		Scanner sc = new Scanner(System.in); 
 
-		int num, tot=0;
-		double avg=0.0, std=0.0;
-
-		System.out.print("학생 수 입력 : ");
-		num = sc.nextInt();
-		int[] arr = new int[num];	
+		// ○ 주요 변수 선언
+		int num;		// 사용자로부터 입력받는 학생 수 변수
+		int sum=0;		// 정수형 합 변수
+		int avg=0;      // 정수형 평균 변수
 		
-		for (int i=0; i<arr.length; i++)
+		// ○ 사용자에게 데이터 입력 받기
+		System.out.print("학생 수 입력 : ");  // 사용자에게 안내 메시지 출력
+		num = sc.nextInt();					  // num변수에 정수형 학생 수 입력 받음
+		int[] score = new int[num];			  // 입력받은 학생의 수만큼 score 배열 생성  	
+		
+		for (int i=0; i<arr.length; i++)	  // 인덱스 i를 '0'으로 초기화, 첫 번째부터 학생의 수만큼 반복문 실행
 		{
-			System.out.printf("%d번 학생의 점수 입력 : ", i+1);		
-			tot = sc.nextInt();
+			System.out.printf("%d번 학생의 점수 입력 : ", i+1);	 // 사용자에게 안내 메시지 출력
+			score[i] = sc.nextInt();							 // score배열의 i번째 공간에 숫자를 입력 받음
+			sum += score[i];									 // 입력 받은 score배열의 인덱스 값을 합계인 sum에 대입함
 
-			for (int j=0; j<arr.length; j++)
+			avg = sum / num;									 // 평균 = 합계 / 학생 수
+
+			System.out.println();								 // 개행
+			System.out.println(">> 합 : " + sum);				 // 학생 전체 합 출력
+			System.out.println(">> 평균 : " + avg);				 // 학생 전체 평균 출력
+			System.out.println(">> 편차 : ");					 // 학생 전체 편차 출력
+			for (int i=0; i<arr.length; i++)					 // 학생 수만큼 반복시켜서 편차를 출력해야하므로 반복문 실행
 			{
-				std = tot - avg;		
+				System.out.printf("%d : %.1f\n", score[i], (
+					
+				avg*1.0)-score[i]);	// 입력받은 학생 수, 편차 = i번째 학생의 평균 - i번째 학생의 합	
 			}
-        }
-		System.out.printf(">> 합 : %d", tot);
-		System.out.printf(">> 평균 : %.2f", avg);
-		System.out.printf(">> 편차 : %.2f", std);
-	}
-		
-		
+        }	
+	}	
 }
 
 
