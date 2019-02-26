@@ -20,6 +20,9 @@ public class Test069
 	
 	public static void main(String[] args)
 	{
+		//System.out.println("a : " + a);
+		//static이 인스턴스보다 먼저 메모리를 할당받기 때문에 출력될 수 없음
+
 		// Test069 기반의 인스턴스 생성
 		Test069 ob = new Test069();
 

@@ -50,7 +50,7 @@ public class Test033
     System.out.print("임의의 연도 입력 : ");
 	year = Integer.parseInt(br.readLine());
 		
-	if (year%400==0 && year%100!=0 || year%4==0) // if문 : 400년 주기이면서 100년 주기가 아니고, 4년 주기인 윤년 판별  
+	if (year%4==0 && year%100!=0 || year%4==0) // if문 : 400년 주기이면서 100년 주기가 아니고, 4년 주기인 윤년 판별  
 	{
 		System.out.printf("%d년 → 윤년%n", year); // 윤년 출력
 	}

@@ -45,30 +45,41 @@ public class Test084
 		num = sc.nextInt();					  // num변수에 정수형 학생 수 입력 받음
 		int[] score = new int[num];			  // 입력받은 학생의 수만큼 score 배열 생성  	
 		
-		for (int i=0; i<arr.length; i++)	  // 인덱스 i를 '0'으로 초기화, 첫 번째부터 학생의 수만큼 반복문 실행
+		// ○ 연산 및 처리
+		for (int i=0; i<score.length; i++)	  // 인덱스 i를 '0'으로 초기화, 첫 번째부터 학생의 수만큼 반복문 실행
 		{
 			System.out.printf("%d번 학생의 점수 입력 : ", i+1);	 // 사용자에게 안내 메시지 출력
 			score[i] = sc.nextInt();							 // score배열의 i번째 공간에 숫자를 입력 받음
 			sum += score[i];									 // 입력 받은 score배열의 인덱스 값을 합계인 sum에 대입함
-
+		}
 			avg = sum / num;									 // 평균 = 합계 / 학생 수
 
+		// ○ 결과 출력
 			System.out.println();								 // 개행
 			System.out.println(">> 합 : " + sum);				 // 학생 전체 합 출력
 			System.out.println(">> 평균 : " + avg);				 // 학생 전체 평균 출력
 			System.out.println(">> 편차 : ");					 // 학생 전체 편차 출력
-			for (int i=0; i<arr.length; i++)					 // 학생 수만큼 반복시켜서 편차를 출력해야하므로 반복문 실행
+			for (int i=0; i<score.length; i++)					 // 학생 수만큼 반복시켜서 편차를 출력해야하므로 반복문 실행
 			{
-				System.out.printf("%d : %.1f\n", score[i], (
-					
-				avg*1.0)-score[i]);	// 입력받은 학생 수, 편차 = i번째 학생의 평균 - i번째 학생의 합	
-			}
-        }	
-	}	
-}
+				System.out.printf("%d : %.1f\n", score[i], (avg*1.0)-score[i]);	// 입력받은 학생 수, 편차 = i번째 학생의 평균 - i번째 학생의 합	
+			}																	// 평균값에 0.1을 곱하여 평균과 편차에 실수형이 나올 수 있도록 함 
+       }	
+}	
+
 
 
 // 실행 결과
 /*
+학생 수 입력 : 3
+1번 학생의 점수 입력 : 90
+2번 학생의 점수 입력 : 80
+3번 학생의 점수 입력 : 70
 
+>> 합 : 240
+>> 평균 : 80
+>> 편차 :
+90 : -10.0
+80 : 0.0
+70 : 10.0
+계속하려면 아무 키나 누르십시오 . . .
 */
