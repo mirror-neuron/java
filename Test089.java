@@ -47,7 +47,7 @@ public class Test089
 		// 무작위 정수(난수) 1개를 발생시킨다.
 		for (int i=0; i<size; i++) //-- size = arr.length
 		{
-			arr[i] = rd.nextInt(100)+1; //-- 1 ~ 100 사이의 난수 중 1개 발생~!!	cf.
+			arr[i] = rd.nextInt(100)+1; //-- 1 ~ 100 사이의 난수 중 1개 발생~!!	
 			
 			
 			
