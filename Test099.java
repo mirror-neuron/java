@@ -24,12 +24,13 @@ public class Test099
 {
 	public static void main(String[] args)
 	{
+		/*
 		int a[] = {1, 3, 7, 8, 10, 15}
 		int b[] = {1, 3, 9, 27, 51}
 
 		public void input()
 		{
-
+	
 			System.out.print("첫 번째 배열 요소를 입력하세요(공백 구분) : ");
 
 			System.out.print("두 번째 배열 요소를 입력하세요(공백 구분) : ");
@@ -63,6 +64,12 @@ public class Test099
 		{
 			System.out.print
 		}
+		*/
+
+		int a[] = new int[];
+		int b[] = new int[];
+
+		
 
 		
 		

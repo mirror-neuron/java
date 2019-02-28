@@ -101,8 +101,8 @@ class WeekDay
 	    //System.out.println(w);  //--==>> 4 → 목요일
 
 		return weekNames[w];
-
 	}
+
 	// 메소드 정의(결과 출력)
 	void print(String day)
 	{
@@ -123,4 +123,12 @@ public class Test091_1
 
 	}
 }
- 
+
+// 실행 결과
+/*
+  년  월  일  입력(공백 구분) : 2019 2 26
+737059
+
+>> 2019년 2월 26일 → 화요일
+계속하려면 아무 키나 누르십시오 . . .
+*/
