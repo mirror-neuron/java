@@ -65,6 +65,33 @@ public class Test102
 		System.out.println();
 		//--==>> Source Data : 52 42 12 62 60
 
+		// Selection Sort 구현
+		for (i=0; i<a.length; i++)		// 0 1 2 3 → 비교 기준 데이터의 인덱스
+		{
+			//System.out.println("웅");
+
+			for (j=i+1; j<a.length; j++)		// 0 - 1 2 3 4 → 비교 대상 데이터의 인덱스
+			{									// 1 - 2 3 4 
+				//System.out.println("쑝");
+				if (a[i] > a[j])
+				{
+					// 자리 바꾸기
+					a[i] = a[i]^a[j];
+					a[j] = a[j]^a[i];
+					a[i] = a[i]^a[j];
+				}
+			}
+		}
+
+
+		// 결과물 출력
+		System.out.print("Sorted Data : ");
+		for (int n : a)
+		{
+			System.out.print( n + " ");
+		}
+		System.out.println();
+
 
 		/*
 		52, 42, 12, 62, 60		→ 0번째	1번째 비교
@@ -103,7 +130,12 @@ public class Test102
       		        ======
 		---------------------------------------------- 4회전
 		*/
-
-
 	}
 }
+
+// 실행 결과
+/*
+Source Data : 52 42 12 62 60
+Sorted Data : 12 42 52 60 62
+계속하려면 아무 키나 누르십시오 . . .
+*/
