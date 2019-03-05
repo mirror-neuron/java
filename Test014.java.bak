@@ -1,0 +1,70 @@
+/*========================================
+■■■ 자바의 기본 프로그래밍 ■■■
+- 변수와 자료형
+- 자바의 기본 입출력 : BufferedReader
+=========================================*/
+
+// 사용자로부터 이름과 국어점수, 영어점수, 수학점수를 입력받아
+// 이름과 총점을 출력하는 프로그램을 구현한다.
+
+// 실행 예)
+// 이름을 입력하세요 : 한승원
+// 국어 점수 입력 : 90
+// 영어 점수 입력 : 80
+// 수학 점수 입력 : 70
+
+// ==== [결과] ====
+// 이름 : 한승원
+// 총점 : 240
+// ================
+// 계속하려면 아무 키나 누르세요...
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+
+public class Test014
+{
+	public static void main(String[] args) throws IOException
+	{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		String name;
+		int kor, eng, mat, tot;
+
+		System.out.print("이름을 입력하세요 : ");
+		name = br.readLine();
+	
+		System.out.print("국어 점수 입력 : ");
+		kor = Integer.parseInt(br.readLine());
+
+		System.out.print("영어 점수 입력 : ");
+		eng = Integer.parseInt(br.readLine());
+
+		System.out.print("수학 점수 입력 : ");
+		mat = Integer.parseInt(br.readLine());
+
+		tot = kor + eng + mat;
+
+		System.out.println();
+		System.out.println("=========[결과]=========");
+		System.out.println("이름 : " + name);
+		System.out.println("총점 : " + tot);
+		System.out.println("========================"); 
+		
+
+	}
+}
+
+// 실행 결과
+/*
+이름을 입력하세요 : 한승원
+국어 점수를 입력하세요 : 90
+영어 점수를 입력하세요 : 80
+수학 점수 입력 : 70
+
+======== [결과] =========
+이름 : 한승원
+총점 : 240
+===========================
+계속하려면 아무 키나 누르십시오 . . .
+*/
