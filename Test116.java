@@ -119,8 +119,8 @@ class SungjukImpl extends Record implements Sungjuk
 			a[2] = arr[i].mat;
 
 			// 각 학생의 성적 정보 출력
-			System.out.printf("%s  %s\t%4d %4d %4d\t%d\t%d %n", arr[i].hak, arr[i].name, arr[i].kor, arr[i].eng, arr[i].mat, arr[i].tot, arr[i].avg);
-			System.out.printf("\t\t\t0 ");		// 탭 두 번으로 등급이 과목 아래에 출력되도록 함
+			System.out.printf("%s  %s\t%4d%4d%4d\t%d\t%d %n", arr[i].hak, arr[i].name, arr[i].kor, arr[i].eng, arr[i].mat, arr[i].tot, arr[i].avg);
+			System.out.printf("\t\t");		// 탭 두 번으로 등급이 과목 아래에 출력되도록 함
 				
 			// 큰『for』반복문에서 정의한 세 과목의 배열값이 길이(3)만큼 순서대로 돌아가고, 연산 후 등급을 출력함
 			for (int j=0; j<3; j++)
@@ -128,23 +128,24 @@ class SungjukImpl extends Record implements Sungjuk
 				// 『if ~ else if』조건문으로 점수 범위에 따라 등급 출력
 				if (a[j]>=90 && a[j]<=100)
 				{
-					System.out.print("수	");
+					System.out.print("  수");
 				}
 				else if (a[j]>=80)
 				{
-					System.out.print("우	");
+					System.out.print("  우");
 				}
 				else if (a[j]>=70)
 				{
-					System.out.print("미	");
+					System.out.print("  미");
 				}
 				else if (a[j]>=60)
 				{
-					System.out.print("양	");
+					System.out.print("  양");
 				}
 				else
-					System.out.print("가	");
+					System.out.print("  가");
 			}
+			System.out.println();	// 개행
 		}
 	
 	}
@@ -173,15 +174,15 @@ public class Test116
 
 // 실행 결과
 /*
-인원 수 입력(1~10) : 3
-1번째 학생의 이름 학번 입력(공백 구분) : 조수연 2009101
-국어 영어 수학 점수 입력   (공백 구분) : 90 90 85
-2번째 학생의 이름 학번 입력(공백 구분) : 곽효은 2009102
-국어 영어 수학 점수 입력   (공백 구분) : 88 79 99
-3번째 학생의 이름 학번 입력(공백 구분) : 나상실 2009103
-국어 영어 수학 점수 입력   (공백 구분) : 79 80 95
-조수연  2009101  90  90  85     265     88
-                수      수      우      곽효은  2009102  88  79  99     266     88
-                우      미      수      나상실  2009103  79  80  95     254     84
-                미      우      수      계속하려면 아무 키나 누르십시오 . . .
+인원 수 입력(1~10) : 2
+1번째 학생의 이름 학번 입력(공백 구분) : 김김 2019851
+국어 영어 수학 점수 입력   (공백 구분) : 90 80 70
+2번째 학생의 이름 학번 입력(공백 구분) : 님님 2019852
+국어 영어 수학 점수 입력   (공백 구분) : 88 77 99
+김김  2019851     90  80  70    240     80
+                  수  우  미
+님님  2019852     88  77  99    264     88
+                  우  미  수
+계속하려면 아무 키나 누르십시오 . . .
+
 */
