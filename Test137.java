@@ -11,7 +11,7 @@
   
 ○ Calendar 클래스 객체(인스턴스)를 생성할 수 있는 방법
 
-   1. Calendar ob1 = Calendar.getInstance();  //Calendar가 가진 static이 붙은 클래스 메소드(정적 메소드)인 getInstance() 메소드 호출
+   1. Calendar ob1 = Calendar.getInstance();  //Calendar 클래스 내의 static 클래스 메소드(정적 메소드)인 getInstance() 메소드 호출
 
    2. Calendar ob2 = new GregorianCalendar(); //업 캐스팅(Calendar ← GregorianCalendar)
 
