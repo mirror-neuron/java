@@ -63,11 +63,10 @@ public class Test041
 	//②
 	switch (n)
 	{
-	default: System.out.println("입력 오류~!!");break;
-	case 3: System.out.print("★\n");
-	case 2: System.out.print("★\n");
-	case 1: System.out.print("★\n");
-	
+	case 3: System.out.print("★");
+	case 2: System.out.print("★");
+	case 1: System.out.print("★\n"); break;
+	default: System.out.println("입력 오류~!!");
 	}
 		
 	}

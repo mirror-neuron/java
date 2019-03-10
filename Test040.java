@@ -55,7 +55,7 @@ public class Test040
 			case 8	: grade = 'B'; break;
 			case 7	: grade = 'C'; break;
 			case 6	: grade = 'D'; break;
-			default : grade = 'F'; 
+			default : grade = 'F'; break;
 		}
  
 		System.out.printf("당신의 등급은 %c입니다.\n", grade);
