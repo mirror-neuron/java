@@ -21,14 +21,13 @@ public class Test016
 		//		1234567890
 		//		10 + 20 = 30
 
-		System.out.printf("%d\n", 123);
-		System.out.printf("%10d\n", 123);
-		System.out.printf("%010d\n", 123);
+	        System.out.printf("%010d\n", 123);
 		//--==>> 123
 		//		        123(총 10자리, 숫자는 우측 정렬/ 문자는 좌측 정렬)
 		//		 0000000123
 
-		System.out.printf("%+d\n", 365);
+
+         	System.out.printf("%+d\n", 365);
 		System.out.printf("+%d\n", 365);
 		//--==>> +365
 		//		 +365
@@ -64,7 +63,7 @@ public class Test016
 		System.out.printf("%b\n", true);		//--%b = boolean
 		//--==>> true
 		//		 true
-
+ 
 		System.out.printf("%f\n", 123.23);
 		System.out.printf("%.2f\n", 123.23);
 		System.out.printf("%.2f\n", 123.236);		
@@ -76,5 +75,7 @@ public class Test016
 		//       123.12
 
 		//--==>
+
+
 	}
 }

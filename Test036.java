@@ -74,7 +74,7 @@ public class Test036
 		int temp;		//-- 임시 저장 변수(빈 컵)
 
 		System.out.print("첫 번째 정수 입력 : ");
-		a = Integer.parseInt(br.readLine());
+		a = Integer`rseInt(br.readLine());
 		
 		System.out.print("두 번째 정수 입력 : ");
 		b = Integer.parseInt(br.readLine());
@@ -83,8 +83,8 @@ public class Test036
 		c = Integer.parseInt(br.readLine());
 		// 2 2 2 | 3 2 1 | 2 1 3 | 3 1 2 | 1 3 2 | 1 2 3
 		//       | 2 3 1 | 1 2 3 | 1 3 2 | 1 2 3 |
-        //       | 2 1 3 |       | 1 2 3 | 
-        //       | 1 2 3 |
+                //       | 2 1 3 |       | 1 2 3 | 
+                //       | 1 2 3 |
 
 
 		if (a>b)	// ① 첫 번째 정수가 두 번째 정수보다 크다면..

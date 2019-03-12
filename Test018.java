@@ -11,44 +11,47 @@
 
 import java.util.Scanner;
 
-public class Test018
+public class Test019
 {
 	public static void main(String[] args)
 	{
-		//Scanner 인스턴스 생성
+		// Scanner 인스턴스 생성
 		Scanner sc = new Scanner(System.in);
-
-		// ○ 주요 변수 선언
-		String name;				//-- 이름
-		int kor, eng, mat, tot;		//-- 국어, 영어, 수학 점수 및 총점
+		
+		// ○ 주요 변수 선언	
+		String name;
+		int kor, eng, mat, tot;
 
 		// ○ 연산 및 처리
-		System.out.print("이름 국어점수 영어점수 수학점수 입력(공백구분) : ");
-		//-- 조현우 90 80 70 
+		System.out.print("이름,국어,영어,수학 입력(『,』구분) : ");
+		//-- 이재준,90,80,70
 
-		// ※ 사용자가 입력한 데이터를 각 변수에 담아내기
+		//sc = new Scanner(sc.next()).useDelimiter("문자열과 문자열 사이의 ,");
+		//sc = new Scanner(sc.next()).useDelimiter("\\s* 과 \\s* 사이의 ,");   //--  『\\s(임의의 문자열)*(모두)』
+		sc = new Scanner(sc.next()).useDelimiter("\\s*,\\s*"); 
+		//				-----------					 ---
+		//			"이재준,90,80,70"   임의의 문자열과 문자열을 사용자 정의의 구분자(,)를 통해 분할
+		
 		name = sc.next();
 		kor = sc.nextInt();
 		eng = sc.nextInt();
 		mat = sc.nextInt();
 	
-		// ○ 총점 산출
+		// 총점 산출
 		tot = kor + eng + mat;
 
 		// ○ 결과 출력
 		System.out.println();
 		System.out.printf("이름 : %s%n", name);
 		System.out.printf("총점 : %d%n", tot);
-
-		
-	}
+	}	
 }
 
 // 실행 결과
 /*
-이름 국어점수 영어점수 수학점수 입력(공백구분) : 조현우 90 80 70
+이름,국어,영어,수학 입력(『,』구분) : 이재준,90,80,70
 
-이름 : 조현우
+이름 : 이재준
 총점 : 240
 계속하려면 아무 키나 누르십시오 . . .
 */
