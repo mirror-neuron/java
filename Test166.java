@@ -2,6 +2,8 @@
 	   ■■■ 자바의 기본 입출력(I/O) ■■■
 ================================================*/
 
+// (Test168 과 비교~!!)
+
 import java.io.IOException;
 
 public class Test166
@@ -19,7 +21,7 @@ public class Test166
 			ch = (char)data;
 
 			// print() : 문자 스트림 
-			//System.out.print(ch);
+			System.out.print(ch);		//-- 한글깨짐
 			//--==>> 문자열을 입력(종료:Ctrl+z)
 			//		 abcd
 			//		 abcd
